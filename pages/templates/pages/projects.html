@@ -1,0 +1,154 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+
+<body class="projects-page">
+
+  <header id="header" class="header d-flex align-items-center light-background sticky-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+                <li><a href="{% url 'resume' %}">Resume</a></li>
+                <li><a href="{% url 'projects' %}" class="active">Projects</a></li>
+                <li><a href="{% url 'photos' %}">Photos</a></li>
+            </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <div class="header-social-links">
+        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="main">
+{% block content %}
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+<style>
+          b{
+            color: #1387c1
+          }
+          h2{
+            color: #ddce00ff
+          }
+          h1{
+           
+            color: #00a545ff
+            
+          }
+          .project-item {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+          }
+          .project-title {
+            color: #00a545ff;
+            font-size: 1.5rem;
+            margin-top: 0.5rem;
+          }
+          .project-links {
+            margin-top: 1rem;
+          }
+          .project-links .btn {
+            margin-right: 0.5rem;
+          }
+        </style>
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h1><strong>Projects</strong></h1>
+        <p>Here are some of the projects I have worked on, showcasing my skills in development and design.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <!-- Project 1 -->
+        <div class="project-item" data-aos="fade-up">
+          <p>This is a comprehensive dairy management system built with Python and SQL for backend, and HTML/CSS for frontend. It helps manage dairy operations efficiently.</p>
+          <h3 class="project-title">Dairy Management System</h3>
+          <div class="project-links">
+            <a href="{% static 'projects/dairy_management.pdf' %}" download class="btn btn-primary">Download PDF <i class="bi bi-download"></i></a>
+            <a href="https://github.com/yourusername/dairy-management" target="_blank" class="link-underline">View Code <i class="bi bi-github"></i></a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-item" data-aos="fade-up" data-aos-delay="100">
+          <p>Solivagant is an innovative project focused on travel and exploration, developed using modern web technologies to provide a seamless user experience.</p>
+          <h3 class="project-title">Solivagant</h3>
+          <div class="project-links">
+            <a href="{% static 'projects/solivagant.pdf' %}" download class="btn btn-primary">Download PDF <i class="bi bi-download"></i></a>
+            <a href="https://github.com/yourusername/solivagant" target="_blank" class="link-underline">View Code <i class="bi bi-github"></i></a>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-item" data-aos="fade-up" data-aos-delay="200">
+          <p>E-Fresh is an e-commerce platform for fresh produce, built with Django and featuring user-friendly interfaces for buying and selling fresh goods.</p>
+          <h3 class="project-title">E-Fresh</h3>
+          <div class="project-links">
+            <a href="{% static 'projects/e-fresh.pdf' %}" download class="btn btn-primary">Download PDF <i class="bi bi-download"></i></a>
+            <a href="https://github.com/yourusername/e-fresh" target="_blank" class="link-underline">View Code <i class="bi bi-github"></i></a>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Projects Section -->
+{% endblock %}
+  </main>
+
+  <footer id="footer" class="footer">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Musthafa</strong> <span>All Rights Reserved<br></span></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href=""><i class="bi bi-twitter-x"></i></a>
+        <a href=""><i class="bi bi-facebook"></i></a>
+        <a href=""><i class="bi bi-instagram"></i></a>
+        <a href=""><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="#">Mohammed Musthafa</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/typed.js/typed.umd.js' %}"></script>
+  <script src="{% static 'assets/vendor/waypoints/noframework.waypoints.js' %}"></script>
+  <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+
+  <!-- Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>
