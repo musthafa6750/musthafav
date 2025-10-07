@@ -1,6 +1,0 @@
-- [x] Add Contact model to models.py with fields: name, email, subject, message, created_at
-- [x] Modify contact view in views.py to save submission to DB and add success message
-- [x] Register Contact model in admin.py
-- [x] Run makemigrations and migrate
-- [x] Update contact.html to remove sent-message div and rely on Django messages
-- [x] Test the contact form submission
