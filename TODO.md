@@ -1,6 +1,5 @@
-- [x] Add Contact model to models.py with fields: name, email, subject, message, created_at
-- [x] Modify contact view in views.py to save submission to DB and add success message
-- [x] Register Contact model in admin.py
-- [x] Run makemigrations and migrate
-- [x] Update contact.html to remove sent-message div and rely on Django messages
-- [x] Test the contact form submission
+- [ ] Fix static template tags in base.html: remove leading slashes from {% static %} paths
+- [ ] Fix static template tags in contact.html: add {% static %} to script src
+- [ ] Run python manage.py collectstatic locally to ensure static files are collected
+- [ ] On Render dashboard: set build command to 'pip install -r requirements.txt && python manage.py collectstatic --noinput && python manage.py migrate'
+- [ ] Redeploy on Render
