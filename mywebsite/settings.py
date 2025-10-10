@@ -25,9 +25,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-aof@3((!q=mh!8k7!4!hfl(r37o=np$bzyy7yn+rs@jy=m5)s5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'musthafav.onrender.com']
+
 
 
 # Application definition
@@ -122,13 +123,14 @@ EMAIL_HOST_PASSWORD = 'your-app-password'  # Use app password, not regular
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = '/static/'  
+STATIC_URL = '/static/'
 STATICFILES_DIRS = [
       os.path.join(BASE_DIR, 'static'),  # Points to your static/ folder
   ]
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 # Use pathlib for modern Django
-  
-  # For product
+
+  # For production
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
