@@ -1,0 +1,51 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+
+{% block content %}
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+
+      <style>
+        
+        h1 {
+          color: #00a545ff;
+        }
+        h3 {
+          color: #ddce00ff;
+        }
+        b {
+          color: #1387c1;
+        }
+      </style>
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h1><strong>My Projects</strong></h1>
+        <p>Here are some of the projects I've worked on, showcasing my skills in web development, software engineering, and IT support.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row g-4">
+            <!-- <div class="col-md-4" data-aos="fade-up" data-aos-delay="200"> -->
+                <div class="project-item">
+                    <h3>Dairy Management System</h3>
+                    <p>The Dairy Management System is a project for Dairy Milk Management. It deals with maintaining the inventory details of dairy products and dairy shops. There are six modules divided into two parts: Website modules (Admin, Shop, Employee) and Android modules (Farmer, Delivery boy, User). The project was developed using Python with the Flask framework and Android.</p>
+                </div>
+            </div>
+            <div class="project-item">
+                    <h3>Mosque App</h3>
+                    <p>This application helps Muslims locate nearby mosques and view accurate prayer times, especially useful for travelers around the world. The app provides mosque notifications and manages important announcements. It also includes a financial management module to record and organize mosque transactions systematically. To ensure safety during situations like the COVID-19 pandemic, the app generates a unique QR code for each user—required for mosque entry and attendance tracking.</p>
+                </div>
+            <!-- <div class="col-md-4" data-aos="fade-up" data-aos-delay="300"> -->
+                <div class="project-item">
+                    <h3>Solivagant</h3>
+                    <p>The Tourist Management System is a web-based project developed to help travelers, especially solivagants—those who prefer to travel alone—explore hidden and peaceful destinations across Kerala. The main objective is to design an interactive website that provides complete information about tourist places, including maps, travel routes, nearby services, and local guides. The system enables users to plan their trips efficiently while maintaining privacy and independence.</p>
+                </div>
+            </div>
+            <!-- <div class="col-md-4" data-aos="fade-up" data-aos-delay="400"> -->
+                
+            </div>
+        </div>
+      </div>
+
+    </section><!-- /Projects Section -->
+{% endblock %}

@@ -1,0 +1,3 @@
+- [x] Update views.py to handle POST in contact view
+- [x] Update contact.html to submit to correct URL and add CSRF token
+- [x] Test form submission and check data in admin

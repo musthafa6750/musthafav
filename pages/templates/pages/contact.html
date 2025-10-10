@@ -1,0 +1,141 @@
+{% extends "pages/base.html" %}
+{% block content %}
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <style>
+        h1 {
+          color: #00a545ff;
+        }
+        h3 {
+          color: #ddce00ff;
+        }
+        b {
+          color: #1387c1;
+        }
+        .email-link:hover {
+          color: blue;
+          text-decoration: underline;
+        }
+      </style>
+      <div class="container section-title" data-aos="fade-up">
+        <h1><strong>Contact</strong></h1>
+        <p>Feel free to get in touch! Whether you have a question, a project idea, or just want to say hello, I’m always happy to connect.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row g-4 g-lg-5">
+          <div class="col-lg-5">
+            <div class="info-box" data-aos="fade-up" data-aos-delay="200">
+              <h3 style="color: #ddce00ff;">Contact Info</h3>
+              <p>Contact me anytime through email and phone.</p>
+
+              <div class="info-item" data-aos="fade-up" data-aos-delay="300">
+                <div class="icon-box">
+                  <i class="bi bi-geo-alt"></i>
+                </div>
+                <div class="content">
+                  <h4>Our Location</h4>
+                  <p><b>Saudi Arabia</b></p>
+                  <p>Ras Tanura</p><br>
+                  <p><b>India</b></p>
+                  <p>Kerala</p><br>
+                </div>
+              </div>
+
+              <div class="info-item" data-aos="fade-up" data-aos-delay="400">
+                <div class="icon-box">
+                  <i class="bi bi-telephone"></i>
+                </div>
+                <div class="content">
+                  <h4>Phone Number</h4>
+                  <p>+966 0571409923</p>
+                  <!-- <p>+1 6678 254445 41</p> -->
+                </div>
+              </div>
+
+              <div class="info-item" data-aos="fade-up" data-aos-delay="500">
+                <div class="icon-box">
+                  <i class="bi bi-envelope"></i>
+                </div>
+                <div class="content">
+                  <h4>Email Address</h4>
+
+                  <p><a href="mailto:Musthafa6750@gmail.com" class="email-link">Musthafa6750@gmail.com</a></p>
+                </div>
+              </div>
+
+              <div class="info-item" data-aos="fade-up" data-aos-delay="600">
+                <div class="icon-box">
+                  <i class="bi bi-whatsapp"></i>
+                </div>
+                <div class="content">
+                  <h4>WhatsApp</h4>
+                  <p><a href="https://wa.me/9660571409923" target="_blank" class="btn btn-success"><i class="bi bi-whatsapp"></i> Chat on WhatsApp</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <!-- ...existing code... -->
+<div class="contact-form" data-aos="fade-up" data-aos-delay="300">
+  <h3>Get In Touch</h3>
+  <p>Message ME</p>
+
+ <form method="post" data-aos="fade-up" data-aos-delay="200">
+    {% csrf_token %}
+    {% if messages %}
+      {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+      {% endfor %}
+    {% endif %}
+    {% if form.errors %}
+      <div class="alert alert-danger">
+        <ul>
+          {% for field in form %}
+            {% for error in field.errors %}
+              <li>{{ error }}</li>
+            {% endfor %}
+          {% endfor %}
+          {% for error in form.non_field_errors %}
+            <li>{{ error }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+    <div class="row gy-4">
+
+      <div class="col-md-6">
+        <input type="text" name="name" class="form-control" placeholder="Your Name" required value="{{ form.name.value|default_if_none:'' }}">
+      </div>
+
+      <div class="col-md-6 ">
+        <input type="email" class="form-control" name="email" placeholder="Your Email" required value="{{ form.email.value|default_if_none:'' }}">
+      </div>
+
+      <div class="col-12">
+        <input type="text" class="form-control" name="subject" placeholder="Subject" required value="{{ form.subject.value|default_if_none:'' }}">
+      </div>
+
+      <div class="col-12">
+        <textarea class="form-control" name="message" rows="6" placeholder="Message" required>{{ form.message.value|default_if_none:'' }}</textarea>
+      </div>
+
+      <div class="col-12 text-center">
+        <button type="submit" class="btn">Send Message</button>
+      </div>
+
+    </div>
+</form>
+</div>
+<!-- ...existing code... -->
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+{% endblock %}
