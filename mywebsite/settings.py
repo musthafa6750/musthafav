@@ -125,6 +125,7 @@ EMAIL_HOST_PASSWORD = 'your-app-password'  # Use app password, not regular
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
       os.path.join(BASE_DIR, 'static'),  # Points to your static/ folder
+      os.path.join(BASE_DIR, 'pages', 'static'),  # Points to pages/static/ folder
   ]
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
