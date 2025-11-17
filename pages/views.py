@@ -30,4 +30,7 @@ def resume(request):
 def projects(request):
     return render(request, 'pages/projects.html')
 
+def documents(request):
+    return render(request, 'pages/documents.html')
+
 
